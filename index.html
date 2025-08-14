@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website</title>
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Bootstrap CSS & JS Bundle (includes Popper) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Swiper (choose one version only, e.g., v11) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .top-bar {
+      background: green;
+      color: white;
+      padding: 5px 20px;
+      font-size: 14px;
+    }
+    .top-bar span {
+      margin-right: 20px;
+    }
+    .navbar {
+      padding: 10px 20px;
+      color: white;
+    }
+    .navbar .nav-link {
+    color: white !important;
+  }
+    .btn-login {
+      background-color: #c9e265;
+      color: black;
+      padding: 8px 16px;
+      border: none;
+    }
+    /* Hover dropdown support */
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.hover-dropdown .dropdown-toggle::after {
+  transition: transform 0.2s;
+}
+.hover-dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.hero-slide {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem;
+}
+
+    .course-selector {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .course-selector h4 {
+      margin-bottom: 20px;
+    }
+    .course-btn {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .floating-buttons {
+      position: fixed;
+      left: 10px;
+      bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+    .floating-buttons img {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+    .chat-box {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .free-counseling {
+      position: fixed;
+      right: 0;
+      bottom: 100px;
+      background: #ff7200;
+      color: white;
+      padding: 10px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px 0 0 8px;
+    }
+    /* Make cart badge readable */
+.badge {
+  font-size: 0.75rem;
+}
+ .course-btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 14px;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .course-btn:hover {
+    background-color: #ddd;
+  }
+
+  .sub-course-list {
+    display: none;
+    margin: 10px 0 30px;
+  }
+
+  #mba{
+    display: block;
+  }
+  .exam-card {
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .exam-card:hover {
+    background: #f9f9f9;
+  }
+  .exam-card img {
+      height: 30px;
+      margin-right: 15px;
+    }
+
+  .wall-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #007bff;
+    padding: 2px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .counselling-section {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url(img3.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  position: relative;
+  color: #fff;
+}
+
+.stats-box {
+  background: #8BC34A;
+  border-radius: 10px;
+  padding: 20px 10px;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.stat-item {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.stat-item h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.stat-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.counselling-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.counselling-content .highlighted {
+  background: yellow;
+  display: inline-block;
+  padding: 5px 15px;
+  color: #000;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.mentor-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.mentor-img {
+  border-radius: 8px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .mentor-section {
+    text-align: center;
+  }
+}
+.text-success { color: #8BC53F; }
+  .text-primary { color: #003366; }
+  .rounded { border-radius: 15px; }
+  .shadow { box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+
+.newsletter-box {
+      background-color: #8dc63f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .newsletter-box input {
+      max-width: 300px;
+      margin: 0 10px;
+    }
+    .footer {
+      background-color: #003366;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer h5 {
+      border-bottom: 2px solid #8dc63f;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .counselling-button {
+      position: fixed;
+      right: 0;
+      bottom: 100px;
+      background-color: orange;
+      color: white;
+      padding: 10px;
+      writing-mode: vertical-rl;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px 0 0 10px;
+      z-index: 999;
+    }
+</style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar d-flex justify-content-between">
+    <div>
+      <span>Enquiry: +91 8828581455</span>
+      <span>Support: +91 8857945882</span>
+      <span>| 10:00 AM - 07:00 PM</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg px-3" style="background-color: #003366;">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="https://website.com/assets/images/logo.png" alt="Logo" height="40">
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Buy Course Dropdown -->
+      <div class="dropdown me-3 hover-dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    BUY COURSE
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="mbaentrance.html">MBA Entrance</a></li>
+    <li><a class="dropdown-item" href="lawentrance.html">LAW Entrance</a></li>
+    <li><a class="dropdown-item" href="mcaentrance.html">MCA Entrance</a></li>
+    <li><a class="dropdown-item" href="tissentarance.html">TISS Entrance</a></li>
+    <li><a class="dropdown-item" href="bbaentrance.html">BBA Entrance</a></li>
+    <li><a class="dropdown-item" href="hotel_management.html">Hotel Management</a></li>
+  </ul>
+</div>
+
+
+      <!-- Main nav links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item text-white" ><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item text-white"><a class="nav-link" href="result.html">RESULT</a></li>
+                <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="connectUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CONNECT US
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="connectUsDropdown">
+    <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+    <li><a class="dropdown-item" href="course_enquiry.html">Courses Enquiry</a></li>
+    <li><a class="dropdown-item" href="support.html">Support / Help</a></li>
+    <li><a class="dropdown-item" href="#b2b">B2B Associate</a></li>
+  </ul>
+</li>
+        <li class="nav-item text-white"><a class="nav-link" href="#">DEMO LECTURES</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="otherDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    OTHER
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+    <li><a class="dropdown-item" href="#blog">Blog</a></li>
+    <li><a class="dropdown-item" href="#career">Career</a></li>
+    <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+  </ul>
+</li>
+      </ul>
+
+      <!-- Cart and Login -->
+      <div class="d-flex align-items-center">
+        <!-- Cart Icon -->
+        <div class="position-relative me-3">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/shopping-cart.png" alt="Cart" />
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </div>
+
+        <!-- Login Button -->
+        <button class="btn btn-outline-warning bg-warning text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Register</button>
+        <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content d-flex flex-md-row">
+      <!-- Login Form -->
+      <div class="modal-body p-4 w-100">
+        <h5 class="mb-3 text-success">Welcome to <span class="text-success fw-bold">Institute</span></h5>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Login</button>
+          <p class="text-center mt-3">
+            Don't have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register Now..!</a>
+          </p>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h5 class="mb-3 text-success">Register with <span class="text-success fw-bold">Institute</span></h5>
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <form id="registerForm" novalidate>
+        <div class="mb-3">
+          <label for="regName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="regName" required>
+          <div class="invalid-feedback">Enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="regEmail" required>
+          <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="regPassword" required>
+          <div class="invalid-feedback">Enter a password.</div>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Bootstrap Carousel for Hero Section -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="hero-slide d-flex align-items-center justify-content-center text-center text-blue" style="background-image: url(bg.jpg);">
+        <div>
+          <p><em>“National Council for Hotel Management and Catering Technology Joint Entrance Examination”</em></p>
+          <h1>Start your <span style="color: #216d03;">NCHMCT JEE Prep.</span></h1>
+          <h2>Marathon Batch 2026–27</h2>
+          <p>Lectures • Recorded Lectures • Books • Mocktests • Strategy</p>
+          <button class="btn btn-warning mt-3">ENROLL NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="hero-slide d-flex align-items-center justify-content-center text-center text-blue" style="background-image: url(bg1.jpg);">
+        <div>
+          <p><em>“Crack MBA Exams with Confidence”</em></p>
+          <h1>Join our <span style="color: #ffc107;">CAT/CMAT Batches</span></h1>
+          <h2>Expert Mentorship + Test Series</h2>
+          <p>Live Classes • Study Material • Guidance • Mock Interviews</p>
+          <button class="btn btn-warning mt-3">JOIN NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="hero-slide d-flex align-items-center justify-content-center text-center text-blue" style="background-image: url(bg2.jpg);">
+        <div>
+          <p><em>“TISS NET / BBA Entrance Masterclass”</em></p>
+          <h1>New <span style="color: #ffc107;">Batches Launching</span></h1>
+          <h2>Admissions Open 2026</h2>
+          <p>Strategy • Expert Faculty • Daily Practice</p>
+          <button class="btn btn-warning mt-3">ENROLL TODAY</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+  <!-- Course Selector -->
+  <div class="course-selector">
+  <h4>Select Course</h4>
+  <div>
+    <span class="course-btn" data-target="mba">MBA Entrance</a></span>
+    <span class="course-btn" data-target="law">LAW Entrance</a></span>
+    <span class="course-btn" data-target="mca">MCA Entrance</a></span>
+    <span class="course-btn" data-target="tiss">TISS Entrance</a></span>
+    <span class="course-btn" data-target="bba">BBA Entrance</a></span>
+    <span class="course-btn" data-target="hotel">Hotel Management</a></span>
+    <span class="course-btn" data-target="bed">B.Ed Entrance</a></span>
+  </div>
+</div>
+
+
+  <!-- All Sub-Categories (Only One Visible at a Time) -->
+  <div id="mba" class="sub-course-list">
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4"><a href="mbaentrance.html">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All MBA Exams</span>
+        </div></a>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>CAT</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>XAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/snapchat.png" alt="CAT" class="me-3">
+          <span>SNAP</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/books.png" alt="CAT" class="me-3">
+          <span>NMAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CMAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CUTE PG</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>MAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>MBACET</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Sub-Categories (Only One Visible at a Time) -->
+  <div id="law" class="sub-course-list">
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4"><a href="lawentrance.html">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All LAW Exams</span>
+        </div></a>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>CLAT</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>MHCET LAW 5YRS</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/snapchat.png" alt="CAT" class="me-3">
+          <span>SLAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/books.png" alt="CAT" class="me-3">
+          <span>AILET</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CUTE LAW PG</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>LSAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>NLAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>CHRIST(CULEE)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="mca" class="sub-course-list" style="display:none;">
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4"><a href="mcaentrance.html">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All MCA Exams</span>
+        </div></a>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>MCACET</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>NIMCET</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CUTE PG MCA</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>MAH BCACET</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="tiss" class="sub-course-list" style="display:none;">
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4"><a href="tissentarance.html">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All TISS Exams</span>
+        </div></a>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>CUTE PG COQP12</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>CUTE PG COQP11</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>TISS CAT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="bba" class="sub-course-list" style="display:none;">
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4"><a href="bbaentrance.html">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All BBA Exams</span>
+        </div></a>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>IPMAT INDORE</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>NPAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/snapchat.png" alt="CAT" class="me-3">
+          <span>SET GENERAL</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/books.png" alt="CAT" class="me-3">
+          <span>MAH BMS-BBA-BBM-CET</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CUTE UG</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CHRIST UNIVERSITY</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>JIPMAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>IIM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="hotel" class="sub-course-list" style="display:none;">
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4"><a href="hotel_management.html">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All Hotel-Management Exams</span>
+        </div></a>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>NCHMCT JEE</span>
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>ECHAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>IHM A</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>MAH BHMCT CET</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="bed" class="sub-course-list" style="display:none;">
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All Hotel-Management Exams</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>NCHMCT JEE</span>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <!-- ✅ Hero Section -->
+<section class="bg-success text-white py-5 position-relative">
+  <div class="container text-center">
+    <h4 class="text-uppercase">websiteEdu</h4>
+    <h1 class="fw-bold">The Most Comprehensive Exam Preparation Platform</h1>
+    <button class="btn btn-primary my-3">Download Now</button><br>
+    <img src="appstore.png" class="me-2" height="40">
+    <img src="googleplay.png" height="40">
+  </div>
+  <img src="mobile.png" class="position-absolute" style="right: 150px; bottom: 0; height: 300px;">
+  <img src="phone2.png" class="position-absolute" style="right: 20px; bottom: 0; height: 300px;">
+</section>
+
+<section class="container py-5">
+  <h2 class="text-center fw-bold mb-4">Wall Of Fame</h2>
+
+  <div class="swiper wallSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="card text-center shadow-sm p-2">
+          <img src="Shrushti.jpeg" class="mx-auto rounded-circle wall-img" alt="Akhilesh Nandanwar">
+          <h6 class="mt-2 mb-1 fw-bold text-primary">Shrushti Nandanwar</h6>
+          <p class="mb-0 card-text">MCACET<br><strong>VJTI Mumbai</strong></p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="card text-center shadow-sm p-2">
+          <img src="Sudhir.jpeg" class="mx-auto rounded-circle wall-img" alt="Pradnya Tamhane">
+          <h6 class="mt-2 mb-1 fw-bold text-primary">Sudhir Tamhane</h6>
+          <p class="mb-0 card-text">MHCET LAW 3YRS<br><strong>GLC Mumbai</strong></p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card text-center shadow-sm p-2">
+          <img src="Prabhat.jpeg" class="mx-auto rounded-circle wall-img" alt="Pradnya Tamhane">
+          <h6 class="mt-2 mb-1 fw-bold text-primary">Prabhat Tamhane</h6>
+          <p class="mb-0 card-text">MHCET LAW 3YRS<br><strong>GLC Mumbai</strong></p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card text-center shadow-sm p-2">
+          <img src="student2.jpg" class="mx-auto rounded-circle wall-img" alt="Pradnya Tamhane">
+          <h6 class="mt-2 mb-1 fw-bold text-primary">Pradnya Tamhane</h6>
+          <p class="mb-0 card-text">MHCET LAW 3YRS<br><strong>GLC Mumbai</strong></p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card text-center shadow-sm p-2">
+          <img src="student2.jpg" class="mx-auto rounded-circle wall-img" alt="Pradnya Tamhane">
+          <h6 class="mt-2 mb-1 fw-bold text-primary">Pradnya Tamhane</h6>
+          <p class="mb-0 card-text">MHCET LAW 3YRS<br><strong>GLC Mumbai</strong></p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="card text-center shadow-sm p-2">
+          <img src="student2.jpg" class="mx-auto rounded-circle wall-img" alt="Pradnya Tamhane">
+          <h6 class="mt-2 mb-1 fw-bold text-primary">Pradnya Tamhane</h6>
+          <p class="mb-0 card-text">MHCET LAW 3YRS<br><strong>GLC Mumbai</strong></p>
+        </div>
+      </div>
+
+      <!-- Add more swiper-slide items for more students -->
+
+    </div>
+  </div>
+</section>
+
+  <section class="counselling-section text-center">
+  <div class="stats-box container d-flex justify-content-around align-items-center flex-wrap">
+    <div class="stat-item">
+      <h3>6</h3>
+      <p>Centres</p>
+    </div>
+    <div class="stat-item">
+      <h3>5000</h3>
+      <p>Student Selection</p>
+    </div>
+    <div class="stat-item">
+      <h3>100000</h3>
+      <p>YouTube Subscribe</p>
+    </div>
+    <div class="stat-item">
+      <h3>10000</h3>
+      <p>Practice questions</p>
+    </div>
+  </div>
+
+  <div class="counselling-content text-white">
+    <h2><strong>100+ Counselling on Daily Basis</strong></h2>
+    <p class="highlighted">Our Team is right there you to guide about exam preparation and courses information</p><br>
+    <a href="contact.html" class="btn btn-warning text-white fw-bold px-4 py-2 mt-2">FREE COUNSELLING</a>
+  </div>
+</section>
+
+  <section class="mentor-section container py-5">
+  <div class="row align-items-center">
+    <!-- Image Section -->
+    <div class="col-md-5 text-center">
+      <img src="mentor-image.jpg" alt="Mentor" class="img-fluid mentor-img">
+    </div>
+
+    <!-- Text Section -->
+    <div class="col-md-7">
+      <h5 class="text-success">ABOUT US</h5>
+      <h2 class="fw-bold">Welcome to websiteEdu.</h2>
+      <p><strong>Message from Our Mentor:</strong></p>
+      <p>
+        "Success is not just about knowing the right answers, but about developing the right mindset.
+        Here at websiteEdu Education, we believe in a holistic approach to exam preparation, combining hard work,
+        smart strategies, and personal growth."
+      </p>
+      <p>
+        Each student has a unique learning style, and our goal is to help you discover your strengths and
+        overcome challenges in a way that suits you best. With the right guidance, discipline, and consistent effort,
+        nothing is impossible. Our training programs are designed not just to help you ace your exams,
+        but to build your confidence and resilience in the process.
+      </p>
+      <p>
+        Remember, the journey may be tough, but every step you take is an opportunity to grow.
+        We are here to support you, answer your questions, and guide you towards the path of success.
+        Together, we'll make your dream of cracking the entrance exams a reality."
+      </p>
+      <p class="mt-4">
+        - <strong>Sir</strong><br>
+        Lead Mentor<br>
+        web Education
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="demo-video" class="text-center py-5 bg-white">
+  <p class="text-success mb-1">DEMO</p>
+  <h2 class="fw-bold mb-4">Watch Video</h2>
+
+  <div class="container">
+    <div class="video-carousel owl-carousel owl-theme">
+      <!-- Repeat this block for each video -->
+      <div class="item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="item">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID6" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white text-center">
+  <p class="text-success mb-2">OUR STUDENTS TESTIMONIALS</p>
+  <h2 class="fw-bold text-primary mb-4">Students Say’s About Our University</h2>
+
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- Testimonial 1 -->
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded bg-light h-100">
+          <img src="Prabhat.jpeg" class="rounded-circle mb-3" width="80" height="80" alt="student1">
+          <p>“The experience was definitely good. The combination of live and recorded lectures did help us catch up with the classes despite a hectic schedule. The quality of class was good, so were the materials such as notes”</p>
+          <h6 class="text-success fw-bold mb-1">Priyanka Singh</h6>
+          <p class="mb-0">Overall a great experience :)</p>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded bg-light h-100">
+          <img src="Shrushti.jpeg" class="rounded-circle mb-3" width="80" height="80" alt="student2">
+          <p>“My experience with websiteEdu Education has been exceptional, marked by the outstanding support of the teachers and staff. The faculty is not only knowledgeable but also approachable, going above and beyond.”</p>
+          <h6 class="text-success fw-bold mb-1">Harjot Sandhu</h6>
+          <p class="mb-0">Selected for TISS Master in Public Health</p>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded bg-light h-100">
+          <img src="Sudhir.jpeg" class="rounded-circle mb-3" width="80" height="80" alt="student3">
+          <p>“It was an amazing experience with websiteEdu. All staff have taught the concepts clearly and in easy way.”</p>
+          <h6 class="text-success fw-bold mb-1">Chetan Ghadi</h6>
+          <p class="mb-0">Amazing experience Thanks Team websiteEdu</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Cards Section -->
+<section class="py-4 bg-white">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <a href="pastpaper.html" style="text-decoration: none; color: inherit;">
+        <div class="card shadow-sm p-3 mb-3 text-center" style="border-radius: 16px;">
+        <h5 class="fw-bold">Past Year Papers</h5>
+        <img src="https://img.icons8.com/ios-filled/50/000000/book.png" alt="Study Material" class="mx-auto" width="50">
+        <div class="mt-3">
+      <span class="btn btn-dark rounded-circle">&#10140;</span>
+        </div>
+        </div>
+        </a>
+      </div>
+<!-- Card -->
+<div class="col-md-4">
+  <div class="card shadow-sm p-3 mb-3 text-center" style="border-radius: 16px; background-color:#003366; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#authModal">
+    <h5 class="fw-bold" style="color: white;">Daily General knowledge</h5>
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/book.png" alt="Study Material" class="mx-auto" width="50">
+    <div class="mt-3">
+      <span class="btn btn-light rounded-circle">&#10140;</span>
+    </div>
+  </div>
+</div>
+
+<!-- Auth Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="authModalLabel">Login or Register</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          
+          <!-- Login Form -->
+          <div class="col-md-6 border-end">
+            <h6 class="mb-3">Login</h6>
+            <form>
+              <div class="mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Enter your password" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+          </div>
+
+          <!-- Register Form -->
+          <div class="col-md-6">
+            <h6 class="mb-3">Register</h6>
+            <form>
+              <div class="mb-3">
+                <label>Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Create password" required>
+              </div>
+              <button type="submit" class="btn btn-success w-100">Register</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap CSS & JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      <div class="col-md-4">
+        <a href="notification.html" style="text-decoration: none; color: inherit;">
+        <div class="card shadow-sm p-3 mb-3 text-center" style="border-radius: 16px;">
+        <h5 class="fw-bold">Exam Notification</h5>
+        <img src="https://img.icons8.com/ios-filled/50/000000/appointment-reminders--v1.png" alt="Study Material" class="mx-auto" width="50">
+    <div class="mt-3">
+      <span class="btn btn-dark rounded-circle">&#10140;</span>
+    </div>
+  </div>
+</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<div class="newsletter-box">
+  <div class="container">
+    <h5 class="mb-3">Find out about the latest courses with the websiteEdu newsletter.</h5>
+    <form class="d-flex justify-content-center">
+      <input type="email" class="form-control" placeholder="Enter Email">
+      <button type="submit" class="btn btn-dark ms-2">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <img src="logo.png" alt="Logo" height="40">
+        <p class="mt-3">Empowering learners through innovative e-learning solutions.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Career</a></li>
+          <li><a href="result.html">Result</a></li>
+          <li><a href="">Event</a></li>
+          <li><a href="contact.html">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Gallery</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="course_enquiry.html">Course Enquiry</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Buttons -->
+  <div class="floating-buttons">
+    <img src="https://img.icons8.com/ios-filled/50/phone.png" alt="Call">
+    <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+  </div>
+  <!-- Free Counseling -->
+  <div class="counselling-button">free Counselling</div>
+  <!-- Chat Box -->
+  <div class="chat-box">
+    <p><strong>Hey there!</strong><br>How can we help you?</p>
+  </div>
+<script>
+  document.querySelectorAll('.course-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+      const targetEl = document.getElementById(targetId);
+
+      const isOpen = targetEl.style.display === 'block';
+
+      // Hide all sub-course sections
+      document.querySelectorAll('.sub-course-list').forEach(el => el.style.display = 'none');
+
+      // Toggle selected one only if it wasn't open
+      if (!isOpen) {
+        targetEl.style.display = 'block';
+      }
+    });
+  });
+
+  const swiper = new Swiper('.wallSwiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 1,
+      }
+    }
+  });
+
+
+  function toggleWallOfFame() {
+    const wall = document.getElementById('wallOfFame');
+    wall.style.display = (wall.style.display === 'none' || wall.style.display === '') ? 'block' : 'none';
+  }
+
+  $(document).ready(function(){
+    $(".video-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
+    });
+  });
+</script>
+<!-- jQuery and Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</body>
+</html>
